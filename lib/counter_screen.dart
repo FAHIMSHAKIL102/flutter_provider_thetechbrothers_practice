@@ -12,17 +12,17 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-  @override
-  void initState() {
-    super.initState();
-    final counterProvider = Provider.of<CounterProvider>(
-      context,
-      listen: false,
-    );
-    Timer.periodic(Duration(seconds: 2), (Timer) {
-      counterProvider.setCount();
-    });
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   final counterProvider = Provider.of<CounterProvider>(
+  //     context,
+  //     listen: false,
+  //   );
+  //   Timer.periodic(Duration(seconds: 2), (timer) {
+  //     counterProvider.setCount();
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
