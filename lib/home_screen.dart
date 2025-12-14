@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_thetechbrothers_practice/counter_screen.dart';
+import 'package:flutter_provider_thetechbrothers_practice/item_screen.dart';
 import 'package:flutter_provider_thetechbrothers_practice/slider_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -59,6 +60,16 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Text('SliderScreen'),
+          ),
+
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ItemScreen()),
+              );
+            },
+            child: Text('Favouraite App'),
           ),
         ],
       ),

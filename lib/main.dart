@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_thetechbrothers_practice/home_screen.dart';
 import 'package:flutter_provider_thetechbrothers_practice/provider/counter_provider.dart';
+import 'package:flutter_provider_thetechbrothers_practice/provider/favourite_item_provider.dart';
 import 'package:flutter_provider_thetechbrothers_practice/provider/slider_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => CounterProvider()),
         ChangeNotifierProvider(create: (_) => SliderProvider()),
+        ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
       ],
       child: MaterialApp(home: HomeScreen()),
     );
