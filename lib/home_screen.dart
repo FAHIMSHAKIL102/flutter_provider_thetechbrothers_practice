@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_thetechbrothers_practice/counter_screen.dart';
 import 'package:flutter_provider_thetechbrothers_practice/item_screen.dart';
+import 'package:flutter_provider_thetechbrothers_practice/provider/theme_changer_provider.dart';
 import 'package:flutter_provider_thetechbrothers_practice/slider_screen.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Provider'),
-        backgroundColor: Colors.lightBlue,
+        //backgroundColor: Colors.lightBlue,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -70,6 +72,18 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Text('Favouraite App'),
+          ),
+          RadioListTile<ThemeMode>(
+            value: ThemeMode.light,
+            title: Text('Light Mode'),
+            groupValue: Provider.of<ThemeChangerProvider>(context).themeMode,
+            onChanged: Provider.of<ThemeChangerProvider>(context).setThemeMode,
+          ),
+          RadioListTile<ThemeMode>(
+            value: ThemeMode.dark,
+            title: Text('Dark Mode'),
+            groupValue: Provider.of<ThemeChangerProvider>(context).themeMode,
+            onChanged: Provider.of<ThemeChangerProvider>(context).setThemeMode,
           ),
         ],
       ),
