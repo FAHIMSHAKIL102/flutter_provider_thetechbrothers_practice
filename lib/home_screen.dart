@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_thetechbrothers_practice/counter_screen.dart';
 import 'package:flutter_provider_thetechbrothers_practice/item_screen.dart';
+import 'package:flutter_provider_thetechbrothers_practice/password_visiable_screen.dart';
 import 'package:flutter_provider_thetechbrothers_practice/provider/theme_changer_provider.dart';
 import 'package:flutter_provider_thetechbrothers_practice/slider_screen.dart';
 import 'package:provider/provider.dart';
@@ -63,7 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             child: Text('SliderScreen'),
           ),
-
           ElevatedButton(
             onPressed: () {
               Navigator.push(
@@ -72,6 +72,15 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Text('Favouraite App'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PasswordVisiableScreen()),
+              );
+            },
+            child: Text('PasswordScreen'),
           ),
           RadioListTile<ThemeMode>(
             value: ThemeMode.light,

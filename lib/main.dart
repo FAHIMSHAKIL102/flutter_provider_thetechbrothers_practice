@@ -4,6 +4,7 @@ import 'package:flutter_provider_thetechbrothers_practice/provider/counter_provi
 import 'package:flutter_provider_thetechbrothers_practice/provider/favourite_item_provider.dart';
 import 'package:flutter_provider_thetechbrothers_practice/provider/slider_provider.dart';
 import 'package:flutter_provider_thetechbrothers_practice/provider/theme_changer_provider.dart';
+import 'package:flutter_provider_thetechbrothers_practice/provider/visiable_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SliderProvider()),
         ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
         ChangeNotifierProvider(create: (_) => ThemeChangerProvider()),
+        ChangeNotifierProvider(create: (_)=>VisiableProvider())
       ],
       child: Builder(
         builder: (BuildContext context) {
