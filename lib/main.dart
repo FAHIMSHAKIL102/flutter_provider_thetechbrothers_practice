@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SliderProvider()),
         ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
         ChangeNotifierProvider(create: (_) => ThemeChangerProvider()),
-        ChangeNotifierProvider(create: (_)=>VisiableProvider())
+        ChangeNotifierProvider(create: (_) => VisiableProvider()),
       ],
       child: Builder(
         builder: (BuildContext context) {

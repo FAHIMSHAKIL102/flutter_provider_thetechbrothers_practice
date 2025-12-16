@@ -5,7 +5,7 @@ class VisiableProvider with ChangeNotifier {
   bool get toggle => _toggle;
   void setToggle() {
     _toggle = !_toggle;
-    
+
     notifyListeners();
   }
 }

@@ -77,7 +77,9 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => PasswordVisiableScreen()),
+                MaterialPageRoute(
+                  builder: (context) => PasswordVisiableScreen(),
+                ),
               );
             },
             child: Text('PasswordScreen'),

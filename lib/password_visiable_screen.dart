@@ -22,7 +22,7 @@ class PasswordVisiableScreen extends StatelessWidget {
                       value.setToggle();
                     },
                     child: Icon(
-                      value.toggle? Icons.visibility_off : Icons.visibility,
+                      value.toggle ? Icons.visibility_off : Icons.visibility,
                     ),
                   ),
                 ),
